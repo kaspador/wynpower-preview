@@ -5,42 +5,36 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{{title}}</title>
 <meta name="description" content="{{description}}">
+<meta name="robots" content="{{robots}}">
 <link rel="canonical" href="{{canonical}}">
 <meta property="og:type" content="website">
+<meta property="og:locale" content="en_AU">
 <meta property="og:site_name" content="WynnsLegal">
 <meta property="og:title" content="{{title}}">
 <meta property="og:description" content="{{description}}">
 <meta property="og:url" content="{{canonical}}">
-<meta property="og:image" content="{{siteUrl}}/assets/img/logo-mark-512.png">
+<meta property="og:image" content="{{ogImage}}">
+<meta property="og:image:secure_url" content="{{ogImage}}">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="{{ogImageAlt}}">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{title}}">
+<meta name="twitter:description" content="{{description}}">
+<meta name="twitter:image" content="{{ogImage}}">
+<meta name="twitter:image:alt" content="{{ogImageAlt}}">
 <link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="icon" href="/assets/img/favicon-32.png" type="image/png">
 <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
 <meta name="theme-color" content="#1f2429">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&family=Source+Serif+4:opsz,wght@8..60,600&display=swap">
 <link rel="stylesheet" href="/assets/css/site.css">
 <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "LegalService",
-  "name": "WynnsLegal",
-  "url": "{{siteUrl}}/",
-  "logo": "{{siteUrl}}/assets/img/logo-mark-512.png",
-  "telephone": "+61 3 9742 3192",
-  "email": "info@wynpower.com.au",
-  "foundingDate": "2008",
-  "areaServed": { "@type": "AdministrativeArea", "name": "City of Wyndham, Victoria" },
-  "knowsAbout": ["Wills", "Estate planning", "Powers of attorney", "Probate", "Deceased estates"],
-  "address": {
-    "@type": "PostalAddress",
-    "postOfficeBoxNumber": "162",
-    "addressLocality": "Werribee",
-    "addressRegion": "VIC",
-    "postalCode": "3030",
-    "addressCountry": "AU"
-  }
-}
+{{schema}}
 </script>
 </head>
 <body>

@@ -12,6 +12,23 @@ Static site for WynnsLegal (wills, estates and estate planning, City of Wyndham)
     node build.mjs
 
 Output goes to `dist/`. Upload the contents of `dist/` to any web host.
+The live address (https://wynnslegal.com.au) is set by `SITE_URL` at the top of `build.mjs`.
+
+## SEO and sharing
+Generated on every build: canonical links, Open Graph and Twitter tags, structured data
+(LegalService, Person, WebSite, WebPage, BreadcrumbList, fee catalogue), `sitemap.xml`,
+`robots.txt` and `site.webmanifest`. Business details and fees used in the structured data
+are in `BUSINESS` in `build.mjs`; keep them in step with `src/pages/fees.html`.
+
+Share images (WhatsApp, Facebook, LinkedIn, X) are 1200x630 JPEGs in `assets/img/og/`, one per page.
+To change the wording or photo, edit `CARDS` in `scripts/make-og.py` and run `py scripts/make-og.py`
+(needs Google Chrome and Pillow).
+
+After launch:
+1. Add the site to Google Search Console and Bing Webmaster Tools, and submit `/sitemap.xml`.
+2. Set up or update the Google Business Profile with the new name, website and phone number.
+3. Redirect every URL on wynpower.com.au to the same path on wynnslegal.com.au (301).
+4. Check share previews with the Facebook Sharing Debugger (also refreshes WhatsApp's cache).
 
 ## Contact form
 By default the form opens the visitor's email program addressed to info@wynpower.com.au.

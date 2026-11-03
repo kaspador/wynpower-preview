@@ -22,15 +22,19 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # full history, for sitemap <lastmod> dates
       - uses: actions/setup-node@v4
         with:
           node-version: 22
+      - id: pages
+        uses: actions/configure-pages@v5
       - name: Build
         run: node build.mjs
         env:
-          BASE_PATH: /${{ github.event.repository.name }}
+          SITE_URL: ${{ steps.pages.outputs.base_url }}
+          BASE_PATH: ${{ steps.pages.outputs.base_path }}
           PREVIEW: "1"
-      - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
           path: dist
