@@ -1,8 +1,13 @@
 # Old Wix addresses -> new pages (Netlify / Cloudflare Pages format)
-/about-1                   /privacy-policy.html        301
-/services-1                /tax-agent-disclosure.html  301
-/indvidual-fee-structure   /fees.html                  301
-/news                      /practice-updates.html      301
-/about                     /about.html                 301
-/team                      /team.html                  301
-/contact                   /contact.html               301
+/about-1                   /privacy-policy.html          301
+/services-1                /                             301
+/indvidual-fee-structure   /fees.html                    301
+/news                      /                             301
+/about                     /about.html                   301
+/team                      /about.html                   301
+/contact                   /contact.html                 301
+# Pages removed in the WynnsLegal redesign
+/services.html             /wills-estate-planning.html   301
+/team.html                 /about.html                   301
+/practice-updates.html     /                             301
+/tax-agent-disclosure.html /                             301

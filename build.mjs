@@ -25,11 +25,11 @@ const PREVIEW = process.env.PREVIEW === "1";
 
 const NAV = [
   { key: "home", label: "Home", href: "/" },
-  { key: "about", label: "About", href: "/about.html" },
-  { key: "services", label: "Services", href: "/services.html" },
-  { key: "team", label: "Team", href: "/team.html" },
+  { key: "wills", label: "Wills & Estate Planning", href: "/wills-estate-planning.html" },
+  { key: "poa", label: "Powers of Attorney", href: "/powers-of-attorney.html" },
+  { key: "estates", label: "Deceased Estates", href: "/deceased-estates.html" },
   { key: "fees", label: "Fees", href: "/fees.html" },
-  { key: "updates", label: "Practice Updates", href: "/practice-updates.html" },
+  { key: "about", label: "About", href: "/about.html" },
   { key: "contact", label: "Contact", href: "/contact.html" },
 ];
 
@@ -50,7 +50,7 @@ function parse(source) {
 function navItems(active) {
   return NAV.map(({ key, label, href }) => {
     const current = key === active ? ' aria-current="page"' : "";
-    return `        <li><a href="${href}"${current}>${label}</a></li>`;
+    return `        <li><a href="${href}"${current}>${label.replace(/&/g, "&amp;")}</a></li>`;
   }).join("\n");
 }
 

@@ -58,7 +58,7 @@
           show("Thank you. Your enquiry has been sent and we will be in touch shortly.");
         })
         .catch(function () {
-          show("Sorry, your enquiry could not be sent. Please call us on (03) 9742 6235 or email info@wynpower.com.au.");
+          show("Sorry, your enquiry could not be sent. Please call us on (03) 9742 3192 or email info@wynpower.com.au.");
         })
         .finally(function () {
           button.disabled = false;
